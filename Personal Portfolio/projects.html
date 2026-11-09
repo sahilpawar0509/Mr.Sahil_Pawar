@@ -1,0 +1,544 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Projects | Sahil Pawar</title>
+
+    <meta name="description" content="Explore five projects by Sahil Pawar, including an AI chatbot, India Image Gallery, Farmer Crop Information Portal, THERMX and HeatCare AI.">
+
+    <meta name="author" content="Sahil Pawar">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#101820">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <script src="js/main.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/projects.js" defer></script>
+</head>
+
+<body id="top">
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a href="index.html" class="brand" aria-label="Sahil Pawar Home">
+                <span class="brand-mark">SP</span>
+                <span class="brand-name">Mr. Sahil Pawar<span>.</span></span>
+            </a>
+
+            <button
+                class="mobile-menu-toggle"
+                id="mobileMenuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primaryNavigation">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+            <nav class="main-navigation" id="primaryNavigation">
+
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+
+                <a href="projects.html"
+                   class="nav-link active"
+                   aria-current="page">Projects</a>
+
+                <a href="certificates.html" class="nav-link">Certificates</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Switch color theme"
+                    title="Switch theme">
+
+                    <svg class="theme-icon"
+                         viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round">
+
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="m4.93 4.93 1.42 1.42"></path>
+                        <path d="m17.65 17.65 1.42 1.42"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="m6.35 17.65-1.42 1.42"></path>
+                        <path d="m19.07 4.93-1.42 1.42"></path>
+
+                    </svg>
+
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- PAGE INTRODUCTION -->
+        <section class="page-hero">
+
+            <div class="container page-hero-content">
+
+                <span class="page-eyebrow">SELECTED WORK</span>
+
+                <h1 class="page-title">
+                    My <span>Projects.</span>
+                </h1>
+
+                <p class="page-description">
+                    A collection of projects developed through learning,
+                    experimentation and teamwork. Each project represents
+                    an opportunity to explore technology and solve
+                    practical problems.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECT COLLECTION -->
+        <section class="content-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">PROJECT PORTFOLIO</span>
+
+                    <h2>
+                        Things I've <span>Built.</span>
+                    </h2>
+
+                    <p class="page-description">
+                        Explore my work across artificial intelligence,
+                        web development, agriculture and healthcare.
+                    </p>
+
+                </div>
+
+
+                <!-- FILTERS -->
+                <div class="project-filters" aria-label="Filter projects">
+
+                    <button
+                        class="filter-button active"
+                        type="button"
+                        data-filter="all"
+                        aria-pressed="true">
+                        All Projects
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        type="button"
+                        data-filter="ai"
+                        aria-pressed="false">
+                        AI & Technology
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        type="button"
+                        data-filter="web"
+                        aria-pressed="false">
+                        Web Development
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        type="button"
+                        data-filter="team"
+                        aria-pressed="false">
+                        Team Projects
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        type="button"
+                        data-filter="social"
+                        aria-pressed="false">
+                        Social Impact
+                    </button>
+
+                </div>
+
+
+                <!-- PROJECT GRID -->
+                <div class="project-grid" id="projectGrid">
+
+
+                    <!-- PROJECT 01: CHATBOT -->
+                    <article class="project-card" data-category="ai">
+
+                        <a href="projects/chatbot.html"
+                           class="project-image-link"
+                           aria-label="View AI Chatbot details">
+
+                            <img
+                                src="assets/images/projects/chatbot.png"
+                                alt="AI Chatbot application preview"
+                                class="project-image"
+                                loading="lazy"
+                                width="1600"
+                                height="900">
+
+                        </a>
+
+                        <div class="project-card-content">
+
+                            <span class="project-number">01 / ARTIFICIAL INTELLIGENCE</span>
+
+                            <h3>AI Chatbot</h3>
+
+                            <p>
+                                An interactive chatbot application that
+                                allows users to send messages and receive
+                                conversational responses through a
+                                simple interface.
+                            </p>
+
+                            <div class="project-technologies">
+                                <span class="technology-tag">Chatbot</span>
+                                <span class="technology-tag">Programming</span>
+                                <span class="technology-tag">AI</span>
+                            </div>
+
+                            <div class="project-actions">
+
+                                <a href="projects/chatbot.html"
+                                   class="project-action project-action-primary">
+                                    View Details
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 02: INDIA IMAGE GALLERY -->
+                    <article class="project-card" data-category="web">
+
+                        <a href="projects/india-gallery.html"
+                           class="project-image-link"
+                           aria-label="View India Image Gallery details">
+
+                            <img
+                                src="assets/images/projects/india-gallery.png"
+                                alt="India Image Gallery website preview"
+                                class="project-image"
+                                loading="lazy"
+                                width="1600"
+                                height="900">
+
+                        </a>
+
+                        <div class="project-card-content">
+
+                            <span class="project-number">02 / WEB DEVELOPMENT</span>
+
+                            <h3>India Image Gallery</h3>
+
+                            <p>
+                                An interactive destination gallery where
+                                visitors can explore images and useful
+                                information about popular places,
+                                landmarks and tourist destinations
+                                across India.
+                            </p>
+
+                            <div class="project-technologies">
+                                <span class="technology-tag">HTML</span>
+                                <span class="technology-tag">CSS</span>
+                                <span class="technology-tag">JavaScript</span>
+                            </div>
+
+                            <div class="project-actions">
+
+                                <a href="projects/india-gallery.html"
+                                   class="project-action project-action-primary">
+                                    View Details
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 03: FARMER PORTAL -->
+                    <article class="project-card" data-category="social">
+
+                        <a href="projects/farmer-portal.html"
+                           class="project-image-link"
+                           aria-label="View Farmer Crop Information Portal details">
+
+                            <img
+                                src="assets/images/projects/farmer-portal.png"
+                                alt="Farmer Crop Information Portal preview"
+                                class="project-image"
+                                loading="lazy"
+                                width="1600"
+                                height="900">
+
+                        </a>
+
+                        <div class="project-card-content">
+
+                            <span class="project-number">03 / AGRICULTURE TECHNOLOGY</span>
+
+                            <h3>Farmer Crop Information Portal</h3>
+
+                            <p>
+                                A crop information platform designed
+                                to help farmers understand which crops
+                                are suitable for different agricultural
+                                seasons and access relevant crop details.
+                            </p>
+
+                            <div class="project-technologies">
+                                <span class="technology-tag">Web Development</span>
+                                <span class="technology-tag">Agriculture</span>
+                                <span class="technology-tag">Information Portal</span>
+                            </div>
+
+                            <div class="project-actions">
+
+                                <a href="projects/farmer-portal.html"
+                                   class="project-action project-action-primary">
+                                    View Details
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 04: THERMX -->
+                    <article class="project-card" data-category="team">
+
+                        <a href="projects/thermx.html"
+                           class="project-image-link"
+                           aria-label="View THERMX project details">
+
+                            <img
+                                src="assets/images/projects/thermx.png"
+                                alt="THERMX NASA FIRMS heat monitoring dashboard preview"
+                                class="project-image"
+                                loading="lazy"
+                                width="1600"
+                                height="900">
+
+                        </a>
+
+                        <div class="project-card-content">
+
+                            <span class="project-number">04 / SMART INDIA HACKATHON</span>
+
+                            <h3>THERMX</h3>
+
+                            <p>
+                                A collaborative project based on an
+                                official Smart India Hackathon problem.
+                                The system uses NASA FIRMS data to detect
+                                thermal events and investigate potential
+                                sources and causes of heat.
+                            </p>
+
+                            <div class="project-technologies">
+                                <span class="technology-tag">NASA FIRMS</span>
+                                <span class="technology-tag">Python</span>
+                                <span class="technology-tag">React</span>
+                                <span class="technology-tag">Geospatial Data</span>
+                            </div>
+
+                            <div class="project-actions">
+
+                                <a href="projects/thermx.html"
+                                   class="project-action project-action-primary">
+                                    View Details
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 05: HEATCARE AI -->
+                    <article class="project-card" data-category="team">
+
+                        <a href="projects/heatcare-ai.html"
+                           class="project-image-link"
+                           aria-label="View HeatCare AI project details">
+
+                            <img
+                                src="assets/images/projects/heatcare-ai.png"
+                                alt="HeatCare AI hospital demand forecasting dashboard preview"
+                                class="project-image"
+                                loading="lazy"
+                                width="1600"
+                                height="900">
+
+                        </a>
+
+                        <div class="project-card-content">
+
+                            <span class="project-number">05 / HEALTHCARE TECHNOLOGY</span>
+
+                            <h3>HeatCare AI</h3>
+
+                            <p>
+                                A collaborative hackathon solution that
+                                forecasts upcoming hospital patient demand,
+                                helping hospitals prepare beds, medical
+                                staff and essential resources in advance.
+                            </p>
+
+                            <div class="project-technologies">
+                                <span class="technology-tag">Python</span>
+                                <span class="technology-tag">FastAPI</span>
+                                <span class="technology-tag">React</span>
+                                <span class="technology-tag">Data Analytics</span>
+                            </div>
+
+                            <div class="project-actions">
+
+                                <a href="projects/heatcare-ai.html"
+                                   class="project-action project-action-primary">
+                                    View Details
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+                <p id="projectCount"
+                   class="text-muted"
+                   aria-live="polite"
+                   style="margin-top:25px;font-size:13px;">
+                    Showing 5 projects
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT CTA -->
+        <section class="contact-cta section-padding">
+
+            <div class="container">
+
+                <div class="cta-content">
+
+                    <span class="section-label">LET'S COLLABORATE</span>
+
+                    <h2>
+                        Have a Project <span>In Mind?</span>
+                    </h2>
+
+                    <p>
+                        I'm interested in exploring ideas, learning
+                        new technologies and collaborating on
+                        meaningful projects.
+                    </p>
+
+                    <a href="contact.html" class="btn btn-primary">
+                        Get In Touch
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <!-- STANDARD PORTFOLIO FOOTER -->
+<footer class="site-footer">
+
+    <div class="container footer-content">
+
+        <a href="index.html"
+           class="brand"
+           aria-label="Sahil Pawar homepage">
+
+            <span class="brand-mark">SP</span>
+            <span class="brand-name">Sahil Pawar<span>.</span></span>
+
+        </a>
+
+        <p class="footer-description">
+            Building ideas through technology and creativity.
+        </p>
+
+        <nav class="footer-navigation" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="certificates.html">Certificates</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="copyrightYear">2026</span>
+                Sahil Pawar. All rights reserved.
+            </p>
+
+            <a href="#top" class="back-to-top">
+                Back to Top ↑
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,396 @@
+
+/* =========================================================
+   SAHIL PAWAR — PORTFOLIO
+   PREMIUM TYPOGRAPHY & SCROLL ANIMATIONS
+========================================================= */
+
+
+/* =========================================================
+   1. ANIMATION VARIABLES
+========================================================= */
+
+:root {
+    --animation-fast: 0.25s ease;
+    --animation-normal: 0.55s cubic-bezier(0.2, 0.7, 0.2, 1);
+    --animation-smooth: 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+/* =========================================================
+   2. KEYFRAMES
+========================================================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes blurReveal {
+    from {
+        opacity: 0;
+        filter: blur(9px);
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes gentleFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+
+/* =========================================================
+   3. HERO INTRODUCTION ANIMATIONS
+========================================================= */
+
+.hero-content > * {
+    animation: blurReveal 0.85s both;
+}
+
+.hero-content > *:nth-child(1) {
+    animation-delay: 0.10s;
+}
+
+.hero-content > *:nth-child(2) {
+    animation-delay: 0.20s;
+}
+
+.hero-content > *:nth-child(3) {
+    animation-delay: 0.32s;
+}
+
+.hero-content > *:nth-child(4) {
+    animation-delay: 0.44s;
+}
+
+.hero-content > *:nth-child(5) {
+    animation-delay: 0.56s;
+}
+
+.hero-content > *:nth-child(6) {
+    animation-delay: 0.68s;
+}
+
+.profile-image-wrapper {
+    animation: scaleIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.1s;
+}
+
+.hero-title {
+    animation: blurReveal 1s both;
+    animation-delay: 0.25s;
+}
+
+.hero-intro {
+    animation: fadeDown 0.7s both;
+    animation-delay: 0.15s;
+}
+
+.hero-description {
+    animation: fadeUp 0.9s both;
+    animation-delay: 0.5s;
+}
+
+.hero-actions {
+    animation: fadeUp 0.9s both;
+    animation-delay: 0.65s;
+}
+
+.hero-social-links {
+    animation: fadeIn 1s both;
+    animation-delay: 0.8s;
+}
+
+
+/* =========================================================
+   4. SECTION HEADING ANIMATIONS
+========================================================= */
+
+.section-heading,
+.page-hero-content,
+.page-heading {
+    animation: blurReveal 0.9s both;
+}
+
+.section-heading h2,
+.page-title,
+.cta-content h2 {
+    animation: blurReveal 0.9s both;
+}
+
+.section-label,
+.page-eyebrow {
+    animation: fadeDown 0.7s both;
+}
+
+
+/* =========================================================
+   5. SCROLL-BASED REVEAL
+   Supported by modern browsers.
+========================================================= */
+
+@supports (animation-timeline: view()) {
+
+    .introduction-content,
+    .contact-cta,
+    .content-section,
+    .section-heading,
+    .project-card,
+    .certificate-card,
+    .skill-card,
+    .info-card,
+    .timeline-item,
+    .contact-panel {
+        animation: fadeUp linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 45%;
+    }
+
+    .project-card:nth-child(2),
+    .certificate-card:nth-child(2),
+    .skill-card:nth-child(2) {
+        animation-range: entry 0% entry 50%;
+    }
+
+    .project-card:nth-child(3),
+    .certificate-card:nth-child(3),
+    .skill-card:nth-child(3) {
+        animation-range: entry 0% entry 55%;
+    }
+}
+
+
+/* =========================================================
+   6. TEXT REVEAL EFFECTS
+========================================================= */
+
+.introduction-content p,
+.contact-intro,
+.contact-form-description,
+.page-description {
+    transition:
+        color var(--animation-normal),
+        transform var(--animation-normal);
+}
+
+.section-heading h2,
+.page-title,
+.hero-title,
+.project-card h3 {
+    transition:
+        color var(--animation-normal),
+        letter-spacing var(--animation-normal);
+}
+
+
+/* =========================================================
+   7. PROJECT CARD ANIMATIONS
+========================================================= */
+
+.project-card,
+.certificate-card,
+.skill-card,
+.info-card {
+    transition:
+        transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+        box-shadow 0.4s ease,
+        border-color 0.3s ease;
+}
+
+.project-card:hover,
+.certificate-card:hover,
+.skill-card:hover,
+.info-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card .project-image,
+.certificate-card img {
+    transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.project-card:hover .project-image,
+.certificate-card:hover img {
+    transform: scale(1.025);
+}
+
+
+/* =========================================================
+   8. BUTTON ANIMATIONS
+========================================================= */
+
+.btn,
+.theme-toggle,
+.social-link,
+.text-link,
+.project-link,
+.back-to-top {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.theme-toggle:hover {
+    transform: translateY(-3px) rotate(7deg);
+}
+
+
+/* =========================================================
+   9. NAVIGATION ANIMATIONS
+========================================================= */
+
+.nav-link {
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+}
+
+.brand-mark {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.brand:hover .brand-mark {
+    transform: rotate(-5deg) scale(1.05);
+}
+
+
+/* =========================================================
+   10. GLASS CARD HIGHLIGHTS
+========================================================= */
+
+.project-card,
+.contact-panel,
+.certificate-card,
+.info-card {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.project-card:hover,
+.contact-panel:hover,
+.certificate-card:hover,
+.info-card:hover {
+    border-color: rgba(40, 120, 240, 0.35);
+}
+
+
+/* =========================================================
+   11. PAGE ENTRANCE
+========================================================= */
+
+main {
+    animation: fadeIn 0.65s ease both;
+}
+
+.page-hero-content {
+    animation: blurReveal 0.85s both;
+}
+
+
+/* =========================================================
+   12. MOBILE OPTIMIZATION
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-content > * {
+        animation-duration: 0.65s;
+    }
+
+    .hero-title {
+        letter-spacing: -2px;
+    }
+
+    .project-card:hover,
+    .certificate-card:hover,
+    .skill-card:hover,
+    .info-card:hover {
+        transform: translateY(-3px);
+    }
+
+}
+
+
+/* =========================================================
+   13. REDUCED MOTION ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-delay: 0ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
